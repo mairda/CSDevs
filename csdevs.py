@@ -307,7 +307,7 @@ class CSDevs(QDialog):
     # Load the moon image, JPEG doesn't support transparency (surrounding black
     # sky) and computing it is too much trouble, use a TIFF with transparent
     # sky area
-    theMoon = QImage("799A0918T.TIFF")
+    theMoon = QImage("799A0918TS.TIFF")
     pmMoon = None
 
     # Time-of-day management
