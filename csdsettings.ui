@@ -1,0 +1,2648 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SettingsDlg</class>
+ <widget class="QDialog" name="SettingsDlg">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>450</width>
+    <height>602</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>CSDev Settings</string>
+  </property>
+  <widget class="QDialogButtonBox" name="buttonBox">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>560</y>
+     <width>401</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+   <property name="standardButtons">
+    <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+   </property>
+  </widget>
+  <widget class="QWidget" name="horizontalLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>2</x>
+     <y>3</y>
+     <width>447</width>
+     <height>537</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="hblTabHolder">
+    <item>
+     <widget class="QTabWidget" name="twSettingsTabs">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>430</width>
+        <height>480</height>
+       </size>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="tabAutoExposure">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>504</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>504</height>
+        </size>
+       </property>
+       <attribute name="title">
+        <string>Auto-exposure</string>
+       </attribute>
+       <widget class="QWidget" name="verticalLayoutWidget_4">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>1</y>
+          <width>435</width>
+          <height>813</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_6">
+         <item>
+          <widget class="QTextBrowser" name="textBrowser_5">
+           <property name="enabled">
+            <bool>true</bool>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>433</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>138</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="sizeAdjustPolicy">
+            <enum>QAbstractScrollArea::AdjustToContents</enum>
+           </property>
+           <property name="html">
+            <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+hr { height: 1px; border-width: 0; }
+li.unchecked::marker { content: &quot;\2610&quot;; }
+li.checked::marker { content: &quot;\2612&quot;; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Cantarell'; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Set the controls that will be used to perform automatic exposure adjustment. List camera controls that affect the image properties Brightness, Contrast and Saturation. A given camera control can be used to adjust more than one image property, e.g. if a camera Gamma control affects Brightness and Contrast. If needed, set range limits for each camera control within each image property it is used in, e.g. if the whole range of a camera contrast control affects image Contrast set no Contrast/contrast range but half of the camera contrast control range also affects image Brightness set that range for Brightness/contrast. If increasing a control value decreases an image property it's listed in then use the &amp;quot;Negative effect&amp;quot; checkbox for that property/control. Enable daytime or nighttime only automatic exposure controls with the check-boxes and see the controls for daytime or nighttime automatic exposure using the radio buttons.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QGroupBox" name="gbTOD">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>433</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>56</height>
+            </size>
+           </property>
+           <property name="title">
+            <string>Time Of Day</string>
+           </property>
+           <widget class="QRadioButton" name="rbDayCtrls">
+            <property name="geometry">
+             <rect>
+              <x>6</x>
+              <y>26</y>
+              <width>52</width>
+              <height>24</height>
+             </rect>
+            </property>
+            <property name="toolTip">
+             <string>View camera daytime control settings for current image property</string>
+            </property>
+            <property name="text">
+             <string>Day</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+           </widget>
+           <widget class="QRadioButton" name="rbNightCtrls">
+            <property name="geometry">
+             <rect>
+              <x>60</x>
+              <y>26</y>
+              <width>64</width>
+              <height>24</height>
+             </rect>
+            </property>
+            <property name="toolTip">
+             <string>View camera nighttime control settings for current image property</string>
+            </property>
+            <property name="text">
+             <string>Night</string>
+            </property>
+           </widget>
+           <widget class="QCheckBox" name="cbDayOnly">
+            <property name="geometry">
+             <rect>
+              <x>130</x>
+              <y>26</y>
+              <width>117</width>
+              <height>24</height>
+             </rect>
+            </property>
+            <property name="toolTip">
+             <string>Check to only provide daytime controls to adjust image properties</string>
+            </property>
+            <property name="text">
+             <string>Daytime Only</string>
+            </property>
+           </widget>
+           <widget class="QCheckBox" name="cbNightOnly">
+            <property name="geometry">
+             <rect>
+              <x>249</x>
+              <y>26</y>
+              <width>129</width>
+              <height>24</height>
+             </rect>
+            </property>
+            <property name="toolTip">
+             <string>Check to only provide nighttime controls to adjust image properties</string>
+            </property>
+            <property name="text">
+             <string>NIghttime Only</string>
+            </property>
+           </widget>
+          </widget>
+         </item>
+         <item>
+          <widget class="QGroupBox" name="gbExposureControls">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>433</width>
+             <height>300</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>1677215</height>
+            </size>
+           </property>
+           <property name="title">
+            <string>Exposure Controls</string>
+           </property>
+           <widget class="QLabel" name="label_21">
+            <property name="geometry">
+             <rect>
+              <x>6</x>
+              <y>30</y>
+              <width>106</width>
+              <height>18</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>Image property:</string>
+            </property>
+           </widget>
+           <widget class="QComboBox" name="cbImageProperty">
+            <property name="geometry">
+             <rect>
+              <x>114</x>
+              <y>26</y>
+              <width>101</width>
+              <height>26</height>
+             </rect>
+            </property>
+            <property name="toolTip">
+             <string>Current image property to set usable camera controls for</string>
+            </property>
+            <item>
+             <property name="text">
+              <string>Brightness</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Contrast</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Saturation</string>
+             </property>
+            </item>
+           </widget>
+           <widget class="QLabel" name="label_22">
+            <property name="geometry">
+             <rect>
+              <x>6</x>
+              <y>58</y>
+              <width>283</width>
+              <height>18</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>Automatically Use These Camera Controls:</string>
+            </property>
+           </widget>
+           <widget class="QListWidget" name="lwTuneCtrls">
+            <property name="geometry">
+             <rect>
+              <x>6</x>
+              <y>80</y>
+              <width>284</width>
+              <height>214</height>
+             </rect>
+            </property>
+            <property name="toolTip">
+             <string>Camera controls that affect the current image property</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="pbAddTuneCtrl">
+            <property name="geometry">
+             <rect>
+              <x>296</x>
+              <y>81</y>
+              <width>87</width>
+              <height>26</height>
+             </rect>
+            </property>
+            <property name="toolTip">
+             <string>Add a control for tuning the current image property</string>
+            </property>
+            <property name="text">
+             <string extracomment="Add a control for tuning the current image property">Add</string>
+            </property>
+            <property name="icon">
+             <iconset theme="list-add">
+              <normaloff>.</normaloff>.</iconset>
+            </property>
+            <property name="autoDefault">
+             <bool>false</bool>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="pbRemoveTuneCtrl">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="geometry">
+             <rect>
+              <x>296</x>
+              <y>108</y>
+              <width>87</width>
+              <height>26</height>
+             </rect>
+            </property>
+            <property name="toolTip">
+             <string>Remove the selected control for tuning the current image property</string>
+            </property>
+            <property name="text">
+             <string extracomment="Remove the selectd control for tuning the current image property">Remove</string>
+            </property>
+            <property name="icon">
+             <iconset theme="list-remove">
+              <normaloff>.</normaloff>.</iconset>
+            </property>
+            <property name="autoDefault">
+             <bool>false</bool>
+            </property>
+           </widget>
+           <widget class="QCheckBox" name="cbPropCtrlMin">
+            <property name="geometry">
+             <rect>
+              <x>296</x>
+              <y>136</y>
+              <width>130</width>
+              <height>24</height>
+             </rect>
+            </property>
+            <property name="toolTip">
+             <string>Check to allow setting a minimum control value to use for image exposure</string>
+            </property>
+            <property name="text">
+             <string>Use Minimum</string>
+            </property>
+           </widget>
+           <widget class="QCheckBox" name="cbPropCtrlMax">
+            <property name="geometry">
+             <rect>
+              <x>296</x>
+              <y>189</y>
+              <width>120</width>
+              <height>24</height>
+             </rect>
+            </property>
+            <property name="toolTip">
+             <string>Check to allow setting a maximum control value to use for image exposure</string>
+            </property>
+            <property name="text">
+             <string>Use Maximum</string>
+            </property>
+           </widget>
+           <widget class="QSpinBox" name="sbPropCtrlMinVal">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="geometry">
+             <rect>
+              <x>316</x>
+              <y>161</y>
+              <width>71</width>
+              <height>27</height>
+             </rect>
+            </property>
+            <property name="toolTip">
+             <string>Minimum value to allow control when adjusting the current image property (check &quot;Use Minimum&quot; to enable)</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+            <property name="maximum">
+             <number>88888</number>
+            </property>
+            <property name="value">
+             <number>0</number>
+            </property>
+           </widget>
+           <widget class="QSpinBox" name="sbPropCtrlMaxVal">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="geometry">
+             <rect>
+              <x>316</x>
+              <y>214</y>
+              <width>71</width>
+              <height>27</height>
+             </rect>
+            </property>
+            <property name="toolTip">
+             <string>Maximum value to allow control when adjusting the current image property (check &quot;Use Maximum&quot; to enable)</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+            <property name="maximum">
+             <number>88888</number>
+            </property>
+            <property name="value">
+             <number>0</number>
+            </property>
+           </widget>
+           <widget class="QCheckBox" name="cbNegativeEffect">
+            <property name="geometry">
+             <rect>
+              <x>296</x>
+              <y>267</y>
+              <width>129</width>
+              <height>24</height>
+             </rect>
+            </property>
+            <property name="toolTip">
+             <string>Check to changing camera control value in one direction has opposite value effect on current image property</string>
+            </property>
+            <property name="text">
+             <string>Negative Effect</string>
+            </property>
+           </widget>
+           <widget class="QCheckBox" name="cbEncourageLimits">
+            <property name="geometry">
+             <rect>
+              <x>296</x>
+              <y>242</y>
+              <width>113</width>
+              <height>24</height>
+             </rect>
+            </property>
+            <property name="toolTip">
+             <string>If control value exceeds specified range due to another property's control, allow this property's control to adjust towards nearest limit but not away from it</string>
+            </property>
+            <property name="text">
+             <string>Target Limits</string>
+            </property>
+           </widget>
+           <widget class="QComboBox" name="cbAvailableControls">
+            <property name="geometry">
+             <rect>
+              <x>262</x>
+              <y>26</y>
+              <width>161</width>
+              <height>26</height>
+             </rect>
+            </property>
+           </widget>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tabTargets">
+       <attribute name="title">
+        <string>Targets</string>
+       </attribute>
+       <widget class="QWidget" name="verticalLayoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>447</width>
+          <height>815</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <item>
+          <widget class="QTextBrowser" name="textBrowser_2">
+           <property name="enabled">
+            <bool>true</bool>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>433</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="sizeAdjustPolicy">
+            <enum>QAbstractScrollArea::AdjustToContents</enum>
+           </property>
+           <property name="html">
+            <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+hr { height: 1px; border-width: 0; }
+li.unchecked::marker { content: &quot;\2610&quot;; }
+li.checked::marker { content: &quot;\2612&quot;; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Cantarell'; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Set the target brightness, contrast and saturation you hope captured images to have. You can set different values for daytime and nighttime. Note that these are only the &amp;quot;goal&amp;quot; to aim for. Whether or not they can be achieved for any frame depends on a lot of factors. Value for each is in the range 0 (minimum) to 255 (maximum).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QGroupBox" name="gbDayTargets">
+           <property name="minimumSize">
+            <size>
+             <width>440</width>
+             <height>140</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>0</width>
+             <height>64</height>
+            </size>
+           </property>
+           <property name="title">
+            <string>Day:</string>
+           </property>
+           <widget class="QWidget" name="verticalLayoutWidget_6">
+            <property name="geometry">
+             <rect>
+              <x>2</x>
+              <y>24</y>
+              <width>443</width>
+              <height>114</height>
+             </rect>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_8">
+             <property name="sizeConstraint">
+              <enum>QLayout::SetDefaultConstraint</enum>
+             </property>
+             <item>
+              <widget class="QLabel" name="label_23">
+               <property name="minimumSize">
+                <size>
+                 <width>430</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>430</height>
+                </size>
+               </property>
+               <property name="baseSize">
+                <size>
+                 <width>0</width>
+                 <height>430</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>Maximum:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_2">
+               <item>
+                <spacer name="horizontalSpacer_8">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
+                <widget class="QLabel" name="label_6">
+                 <property name="text">
+                  <string>Brightness:</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QSpinBox" name="sbDayTgtBrightness">
+                 <property name="alignment">
+                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                 </property>
+                 <property name="maximum">
+                  <number>255</number>
+                 </property>
+                 <property name="value">
+                  <number>255</number>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <spacer name="horizontalSpacer">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
+                <widget class="QLabel" name="label_7">
+                 <property name="text">
+                  <string>Contrast:</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QSpinBox" name="sbDayTgtContrast">
+                 <property name="alignment">
+                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                 </property>
+                 <property name="maximum">
+                  <number>255</number>
+                 </property>
+                 <property name="value">
+                  <number>255</number>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <spacer name="horizontalSpacer_2">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
+                <widget class="QLabel" name="label_8">
+                 <property name="text">
+                  <string>Saturation:</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QSpinBox" name="sbDayTgtSaturation">
+                 <property name="alignment">
+                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                 </property>
+                 <property name="maximum">
+                  <number>255</number>
+                 </property>
+                 <property name="value">
+                  <number>255</number>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <spacer name="horizontalSpacer_7">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_24">
+               <property name="text">
+                <string>Minimum:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_11">
+               <property name="leftMargin">
+                <number>0</number>
+               </property>
+               <property name="topMargin">
+                <number>0</number>
+               </property>
+               <property name="rightMargin">
+                <number>0</number>
+               </property>
+               <property name="bottomMargin">
+                <number>0</number>
+               </property>
+               <item>
+                <spacer name="horizontalSpacer_20">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
+                <widget class="QLabel" name="label_25">
+                 <property name="text">
+                  <string>Brightness:</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QSpinBox" name="sbDayTgtBrightnessMin">
+                 <property name="alignment">
+                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                 </property>
+                 <property name="maximum">
+                  <number>255</number>
+                 </property>
+                 <property name="value">
+                  <number>0</number>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <spacer name="horizontalSpacer_23">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
+                <widget class="QLabel" name="label_26">
+                 <property name="text">
+                  <string>Contrast:</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QSpinBox" name="sbDayTgtContrastMin">
+                 <property name="maximum">
+                  <number>255</number>
+                 </property>
+                 <property name="value">
+                  <number>0</number>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <spacer name="horizontalSpacer_22">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
+                <widget class="QLabel" name="label_27">
+                 <property name="text">
+                  <string>Saturation:</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QSpinBox" name="sbDayTgtSaturationMin">
+                 <property name="maximum">
+                  <number>255</number>
+                 </property>
+                 <property name="value">
+                  <number>0</number>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <spacer name="horizontalSpacer_21">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </widget>
+          </widget>
+         </item>
+         <item>
+          <widget class="QGroupBox" name="gbNightTargets">
+           <property name="minimumSize">
+            <size>
+             <width>433</width>
+             <height>140</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="title">
+            <string>Night:</string>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="checked">
+            <bool>false</bool>
+           </property>
+           <widget class="QWidget" name="verticalLayoutWidget_7">
+            <property name="geometry">
+             <rect>
+              <x>4</x>
+              <y>24</y>
+              <width>437</width>
+              <height>114</height>
+             </rect>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_9">
+             <item>
+              <widget class="QLabel" name="label_28">
+               <property name="text">
+                <string>Maximum:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_3">
+               <item>
+                <spacer name="horizontalSpacer_5">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
+                <widget class="QLabel" name="label_9">
+                 <property name="text">
+                  <string>Brightness:</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QSpinBox" name="sbNightTgtBrightness">
+                 <property name="alignment">
+                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                 </property>
+                 <property name="maximum">
+                  <number>255</number>
+                 </property>
+                 <property name="value">
+                  <number>255</number>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <spacer name="horizontalSpacer_3">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
+                <widget class="QLabel" name="label_10">
+                 <property name="text">
+                  <string>Contrast:</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QSpinBox" name="sbNightTgtContrast">
+                 <property name="alignment">
+                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                 </property>
+                 <property name="maximum">
+                  <number>255</number>
+                 </property>
+                 <property name="value">
+                  <number>255</number>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <spacer name="horizontalSpacer_4">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
+                <widget class="QLabel" name="label_11">
+                 <property name="text">
+                  <string>Saturation:</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QSpinBox" name="sbNightTgtSaturation">
+                 <property name="alignment">
+                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                 </property>
+                 <property name="maximum">
+                  <number>255</number>
+                 </property>
+                 <property name="value">
+                  <number>255</number>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <spacer name="horizontalSpacer_6">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_32">
+               <property name="text">
+                <string>Minimum:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout">
+               <item>
+                <spacer name="horizontalSpacer_25">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
+                <widget class="QLabel" name="label_33">
+                 <property name="text">
+                  <string>Brightness:</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QSpinBox" name="sbNightTgtBrightnessMin">
+                 <property name="alignment">
+                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                 </property>
+                 <property name="maximum">
+                  <number>255</number>
+                 </property>
+                 <property name="value">
+                  <number>0</number>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <spacer name="horizontalSpacer_26">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
+                <widget class="QLabel" name="label_34">
+                 <property name="text">
+                  <string>Contrast:</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QSpinBox" name="sbNightTgtContrastMin">
+                 <property name="alignment">
+                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                 </property>
+                 <property name="maximum">
+                  <number>255</number>
+                 </property>
+                 <property name="value">
+                  <number>0</number>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <spacer name="horizontalSpacer_27">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
+                <widget class="QLabel" name="label_35">
+                 <property name="text">
+                  <string>Saturation:</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QSpinBox" name="sbNightTgtSaturationMin">
+                 <property name="alignment">
+                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                 </property>
+                 <property name="maximum">
+                  <number>255</number>
+                 </property>
+                 <property name="value">
+                  <number>0</number>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <spacer name="horizontalSpacer_24">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </widget>
+          </widget>
+         </item>
+         <item>
+          <spacer name="verticalSpacer_2">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tabLimits">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <attribute name="title">
+        <string>Limits</string>
+       </attribute>
+       <widget class="QWidget" name="verticalLayoutWidget_5">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>1</y>
+          <width>433</width>
+          <height>503</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_7" stretch="0,0,0">
+         <item>
+          <widget class="QTextBrowser" name="textBrowser">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>98</height>
+            </size>
+           </property>
+           <property name="html">
+            <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+hr { height: 1px; border-width: 0; }
+li.unchecked::marker { content: &quot;\2610&quot;; }
+li.checked::marker { content: &quot;\2612&quot;; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Cantarell'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;Use this to set range limits and preferred target value for controls. This allows for things like setting a limited focus range and a preferred focus value, for a camera that supports focus. Equally, you can set different range limits for daytime and nightime focus. Take care if using this to set control range limits for controls you have also set as Auto-exposure controls. It can make sense to have limits for, say, gamma or saturation controls to avoid severity effects problems but it may cause auto-exposure failures.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QGroupBox" name="groupBox">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>56</height>
+            </size>
+           </property>
+           <property name="title">
+            <string>Time Of Day</string>
+           </property>
+           <widget class="QRadioButton" name="rbLimitsDay">
+            <property name="geometry">
+             <rect>
+              <x>6</x>
+              <y>26</y>
+              <width>52</width>
+              <height>24</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>Day</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+           </widget>
+           <widget class="QRadioButton" name="rbLimitsNight">
+            <property name="geometry">
+             <rect>
+              <x>60</x>
+              <y>26</y>
+              <width>64</width>
+              <height>24</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>Night</string>
+            </property>
+           </widget>
+          </widget>
+         </item>
+         <item>
+          <widget class="QGroupBox" name="groupBox_2">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="title">
+            <string>Control Limits</string>
+           </property>
+           <widget class="QLabel" name="label_30">
+            <property name="geometry">
+             <rect>
+              <x>6</x>
+              <y>30</y>
+              <width>55</width>
+              <height>18</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>Control:</string>
+            </property>
+           </widget>
+           <widget class="QComboBox" name="cbAvailableLimitControls">
+            <property name="geometry">
+             <rect>
+              <x>63</x>
+              <y>26</y>
+              <width>161</width>
+              <height>26</height>
+             </rect>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_31">
+            <property name="geometry">
+             <rect>
+              <x>6</x>
+              <y>58</y>
+              <width>292</width>
+              <height>18</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>Automatically Limit These Camera Controls:</string>
+            </property>
+           </widget>
+           <widget class="QListWidget" name="lwLimitCtrls">
+            <property name="geometry">
+             <rect>
+              <x>6</x>
+              <y>80</y>
+              <width>284</width>
+              <height>214</height>
+             </rect>
+            </property>
+            <property name="toolTip">
+             <string>Camera controls that affect the current image property</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="pbAddLimitCtrl">
+            <property name="geometry">
+             <rect>
+              <x>227</x>
+              <y>26</y>
+              <width>87</width>
+              <height>26</height>
+             </rect>
+            </property>
+            <property name="toolTip">
+             <string>Add a control for tuning the current image property</string>
+            </property>
+            <property name="text">
+             <string extracomment="Add a control for tuning the current image property">Add</string>
+            </property>
+            <property name="icon">
+             <iconset theme="list-add">
+              <normaloff>.</normaloff>.</iconset>
+            </property>
+            <property name="autoDefault">
+             <bool>false</bool>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="pbRemoveLimitCtrl">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="geometry">
+             <rect>
+              <x>319</x>
+              <y>26</y>
+              <width>87</width>
+              <height>26</height>
+             </rect>
+            </property>
+            <property name="toolTip">
+             <string>Remove the selected control for tuning the current image property</string>
+            </property>
+            <property name="text">
+             <string extracomment="Remove the selectd control for tuning the current image property">Remove</string>
+            </property>
+            <property name="icon">
+             <iconset theme="list-remove">
+              <normaloff>.</normaloff>.</iconset>
+            </property>
+            <property name="autoDefault">
+             <bool>false</bool>
+            </property>
+           </widget>
+           <widget class="QCheckBox" name="cbLimitCtrlMax">
+            <property name="geometry">
+             <rect>
+              <x>296</x>
+              <y>134</y>
+              <width>120</width>
+              <height>24</height>
+             </rect>
+            </property>
+            <property name="toolTip">
+             <string>Check to allow setting a maximum control value to use for image exposure</string>
+            </property>
+            <property name="text">
+             <string>Use Maximum</string>
+            </property>
+           </widget>
+           <widget class="QCheckBox" name="cbLimitCtrlMin">
+            <property name="geometry">
+             <rect>
+              <x>296</x>
+              <y>81</y>
+              <width>130</width>
+              <height>24</height>
+             </rect>
+            </property>
+            <property name="toolTip">
+             <string>Check to allow setting a minimum control value to use for image exposure</string>
+            </property>
+            <property name="text">
+             <string>Use Minimum</string>
+            </property>
+           </widget>
+           <widget class="QSpinBox" name="sbLimitCtrlMaxVal">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="geometry">
+             <rect>
+              <x>316</x>
+              <y>159</y>
+              <width>71</width>
+              <height>27</height>
+             </rect>
+            </property>
+            <property name="toolTip">
+             <string>Maximum value to allow control when adjusting the current image property (check &quot;Use Maximum&quot; to enable)</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+            <property name="maximum">
+             <number>88888</number>
+            </property>
+            <property name="value">
+             <number>0</number>
+            </property>
+           </widget>
+           <widget class="QSpinBox" name="sbLimitCtrlMinVal">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="geometry">
+             <rect>
+              <x>316</x>
+              <y>106</y>
+              <width>71</width>
+              <height>27</height>
+             </rect>
+            </property>
+            <property name="toolTip">
+             <string>Minimum value to allow control when adjusting the current image property (check &quot;Use Minimum&quot; to enable)</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+            <property name="maximum">
+             <number>88888</number>
+            </property>
+            <property name="value">
+             <number>0</number>
+            </property>
+           </widget>
+           <widget class="QCheckBox" name="cbLimitEncourage">
+            <property name="geometry">
+             <rect>
+              <x>296</x>
+              <y>187</y>
+              <width>113</width>
+              <height>24</height>
+             </rect>
+            </property>
+            <property name="toolTip">
+             <string>If control value exceeds specified range due to another property's control, allow this property's control to adjust towards nearest limit but not away from it</string>
+            </property>
+            <property name="text">
+             <string>Target Limits</string>
+            </property>
+           </widget>
+           <widget class="QCheckBox" name="cbLimitPreferred">
+            <property name="geometry">
+             <rect>
+              <x>296</x>
+              <y>212</y>
+              <width>129</width>
+              <height>24</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>Preferred Value</string>
+            </property>
+           </widget>
+           <widget class="QSpinBox" name="sbLimitCtrlPreferredVal">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="geometry">
+             <rect>
+              <x>314</x>
+              <y>237</y>
+              <width>71</width>
+              <height>27</height>
+             </rect>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tabImage">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <attribute name="title">
+        <string>Caption</string>
+       </attribute>
+       <widget class="QWidget" name="verticalLayoutWidget_2">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>433</width>
+          <height>249</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <item>
+          <widget class="QTextBrowser" name="textBrowser_3">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="sizeAdjustPolicy">
+            <enum>QAbstractScrollArea::AdjustToContents</enum>
+           </property>
+           <property name="html">
+            <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+hr { height: 1px; border-width: 0; }
+li.unchecked::marker { content: &quot;\2610&quot;; }
+li.checked::marker { content: &quot;\2612&quot;; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Cantarell'; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;You can configure some things about the captured image. You can add a small amount of caption, or loggng text and include a date, timestamp, etc.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_16">
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>24</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Image Caption:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_4">
+           <item>
+            <widget class="QLabel" name="label_12">
+             <property name="text">
+              <string>Text:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="leCaptionText">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_12">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeType">
+              <enum>QSizePolicy::Preferred</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>10</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_5">
+           <item>
+            <widget class="QLabel" name="label_13">
+             <property name="text">
+              <string>Stamp:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="cbDateStamp">
+             <property name="text">
+              <string>Date</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="cbTimeStamp">
+             <property name="text">
+              <string>Time</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="cbTwoFourHour">
+             <property name="text">
+              <string>24 Hour</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_11">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="QFrame" name="frame">
+           <property name="autoFillBackground">
+            <bool>false</bool>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::NoFrame</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <widget class="QWidget" name="layoutWidget">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>2</y>
+              <width>431</width>
+              <height>28</height>
+             </rect>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_7">
+             <property name="spacing">
+              <number>2</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="label_15">
+               <property name="text">
+                <string>Horizontal Location:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QRadioButton" name="rbCaptionHLeft">
+               <property name="text">
+                <string>Left</string>
+               </property>
+               <property name="checked">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QRadioButton" name="rbCaptionHCenter">
+               <property name="text">
+                <string>Center</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QRadioButton" name="rbCaptionHRight">
+               <property name="text">
+                <string>Right</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_9">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </widget>
+          </widget>
+         </item>
+         <item>
+          <widget class="QFrame" name="frame_2">
+           <property name="enabled">
+            <bool>true</bool>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::NoFrame</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <widget class="QWidget" name="layoutWidget_2">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>0</y>
+              <width>431</width>
+              <height>28</height>
+             </rect>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_6">
+             <property name="spacing">
+              <number>2</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="label_14">
+               <property name="text">
+                <string>Vertical Location:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QRadioButton" name="rbCaptionVBottom">
+               <property name="text">
+                <string>Bottom</string>
+               </property>
+               <property name="checked">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QRadioButton" name="rbCaptionVCenter">
+               <property name="text">
+                <string>Center</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QRadioButton" name="rbCaptionVTop">
+               <property name="text">
+                <string>Top</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_10">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </widget>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="horizontalLayoutWidget_4">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>330</y>
+          <width>433</width>
+          <height>72</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_8">
+         <item>
+          <widget class="QLabel" name="label_17">
+           <property name="text">
+            <string>Text Color:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_18">
+           <property name="text">
+            <string>Red:</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QSpinBox" name="sbCaptionTextR">
+           <property name="maximum">
+            <number>255</number>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_19">
+           <property name="text">
+            <string>Green:</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QSpinBox" name="sbCaptionTextG">
+           <property name="alignment">
+            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+           </property>
+           <property name="maximum">
+            <number>255</number>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_20">
+           <property name="text">
+            <string>Blue:</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QSpinBox" name="sbCaptionTextB">
+           <property name="alignment">
+            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+           </property>
+           <property name="maximum">
+            <number>255</number>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QGraphicsView" name="wColorView">
+           <property name="maximumSize">
+            <size>
+             <width>40</width>
+             <height>16777215</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_18">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="horizontalLayoutWidget_8">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>250</y>
+          <width>431</width>
+          <height>43</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_13" stretch="0,0,0,0,0">
+         <property name="sizeConstraint">
+          <enum>QLayout::SetDefaultConstraint</enum>
+         </property>
+         <item>
+          <widget class="QLabel" name="label">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>Font:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QFontComboBox" name="cbCaptionFont">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>100</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>320</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="fontFilters">
+            <set>QFontComboBox::MonospacedFonts|QFontComboBox::ProportionalFonts|QFontComboBox::ScalableFonts</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_5">
+           <property name="text">
+            <string>Size:</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QSpinBox" name="sbCaptionFontSize">
+           <property name="alignment">
+            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+           </property>
+           <property name="minimum">
+            <number>4</number>
+           </property>
+           <property name="maximum">
+            <number>100</number>
+           </property>
+           <property name="value">
+            <number>16</number>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_17">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="horizontalLayoutWidget_9">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>294</y>
+          <width>433</width>
+          <height>35</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_14">
+         <item>
+          <widget class="QLabel" name="label_2">
+           <property name="text">
+            <string>Caption text inset:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_3">
+           <property name="layoutDirection">
+            <enum>Qt::LeftToRight</enum>
+           </property>
+           <property name="text">
+            <string>X</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QSpinBox" name="sbCaptionInsetX">
+           <property name="alignment">
+            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+           </property>
+           <property name="maximum">
+            <number>100</number>
+           </property>
+           <property name="value">
+            <number>10</number>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_4">
+           <property name="text">
+            <string>Y</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QSpinBox" name="sbCaptionInsetY">
+           <property name="alignment">
+            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+           </property>
+           <property name="maximum">
+            <number>100</number>
+           </property>
+           <property name="value">
+            <number>6</number>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_29">
+           <property name="text">
+            <string>pixels</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_19">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tabLatLon">
+       <attribute name="title">
+        <string>Lat/Lon</string>
+       </attribute>
+       <widget class="QWidget" name="verticalLayoutWidget_3">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>433</width>
+          <height>347</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_3">
+         <item>
+          <widget class="QTextBrowser" name="textBrowser_4">
+           <property name="enabled">
+            <bool>true</bool>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="sizeAdjustPolicy">
+            <enum>QAbstractScrollArea::AdjustToContents</enum>
+           </property>
+           <property name="html">
+            <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+hr { height: 1px; border-width: 0; }
+li.unchecked::marker { content: &quot;\2610&quot;; }
+li.checked::marker { content: &quot;\2612&quot;; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Cantarell'; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Set the location of the cameras on earth using latitude and longitude co-ordinates. This is used to calculate the times of sunrise and sunset to properly use Day/Night targets for image attributes and Day/Night ranges for controls that affect those image attributes.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QGroupBox" name="gbLatLonFormat">
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>67</height>
+            </size>
+           </property>
+           <property name="title">
+            <string>Latitude, Longitude Format</string>
+           </property>
+           <widget class="QRadioButton" name="rbDMS">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>37</y>
+              <width>205</width>
+              <height>24</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>Degrees, Minutes, Seconds</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+           </widget>
+           <widget class="QRadioButton" name="rbFloat">
+            <property name="geometry">
+             <rect>
+              <x>231</x>
+              <y>37</y>
+              <width>120</width>
+              <height>24</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>Floating Point</string>
+            </property>
+           </widget>
+          </widget>
+         </item>
+         <item>
+          <widget class="QGroupBox" name="gbLatitude">
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>88</height>
+            </size>
+           </property>
+           <property name="title">
+            <string>Latitude</string>
+           </property>
+           <widget class="QWidget" name="layoutWidget_3">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>22</y>
+              <width>433</width>
+              <height>65</height>
+             </rect>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_9">
+             <property name="leftMargin">
+              <number>3</number>
+             </property>
+             <item>
+              <widget class="QSpinBox" name="sbLatDegrees">
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+               <property name="minimum">
+                <number>0</number>
+               </property>
+               <property name="maximum">
+                <number>90</number>
+               </property>
+               <property name="singleStep">
+                <number>1</number>
+               </property>
+               <property name="value">
+                <number>0</number>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="lblLatDegrees">
+               <property name="text">
+                <string>°</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QSpinBox" name="sbLatMinutes">
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+               <property name="maximum">
+                <number>59</number>
+               </property>
+               <property name="value">
+                <number>0</number>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="lblLatMinutes">
+               <property name="text">
+                <string>m</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QSpinBox" name="sbLatSeconds">
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+               <property name="maximum">
+                <number>59</number>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="lblLatSeconds">
+               <property name="text">
+                <string>s</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_13">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QDoubleSpinBox" name="dsbLatFloat">
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+               <property name="decimals">
+                <number>8</number>
+               </property>
+               <property name="minimum">
+                <double>0.000000000000000</double>
+               </property>
+               <property name="maximum">
+                <double>90.000000000000000</double>
+               </property>
+               <property name="singleStep">
+                <double>0.000278000000000</double>
+               </property>
+               <property name="stepType">
+                <enum>QAbstractSpinBox::DefaultStepType</enum>
+               </property>
+               <property name="value">
+                <double>0.000000000000000</double>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="lblLatFloat">
+               <property name="text">
+                <string>°</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_14">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <layout class="QVBoxLayout" name="verticalLayout_4">
+               <item>
+                <widget class="QRadioButton" name="rbLatNorth">
+                 <property name="text">
+                  <string>North</string>
+                 </property>
+                 <property name="checked">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QRadioButton" name="rbLatSouth">
+                 <property name="text">
+                  <string>South</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </widget>
+          </widget>
+         </item>
+         <item>
+          <widget class="QGroupBox" name="bLongitude">
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>88</height>
+            </size>
+           </property>
+           <property name="title">
+            <string>Longitude</string>
+           </property>
+           <widget class="QWidget" name="horizontalLayoutWidget_5">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>22</y>
+              <width>441</width>
+              <height>65</height>
+             </rect>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_10">
+             <property name="leftMargin">
+              <number>2</number>
+             </property>
+             <property name="rightMargin">
+              <number>4</number>
+             </property>
+             <item>
+              <widget class="QSpinBox" name="sbLonDegrees">
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+               <property name="minimum">
+                <number>0</number>
+               </property>
+               <property name="maximum">
+                <number>180</number>
+               </property>
+               <property name="singleStep">
+                <number>1</number>
+               </property>
+               <property name="value">
+                <number>0</number>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="lblLonDegrees">
+               <property name="text">
+                <string>°</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QSpinBox" name="sbLonMinutes">
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+               <property name="maximum">
+                <number>59</number>
+               </property>
+               <property name="value">
+                <number>0</number>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="lblLonMinutes">
+               <property name="text">
+                <string>m</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QSpinBox" name="sbLonSeconds">
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+               <property name="maximum">
+                <number>59</number>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="lblLonSeconds">
+               <property name="text">
+                <string>s</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_15">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QDoubleSpinBox" name="dsbLonFloat">
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+               <property name="decimals">
+                <number>8</number>
+               </property>
+               <property name="minimum">
+                <double>0.000000000000000</double>
+               </property>
+               <property name="maximum">
+                <double>180.000000000000000</double>
+               </property>
+               <property name="singleStep">
+                <double>0.000278000000000</double>
+               </property>
+               <property name="stepType">
+                <enum>QAbstractSpinBox::DefaultStepType</enum>
+               </property>
+               <property name="value">
+                <double>0.000000000000000</double>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="lblLonFloat">
+               <property name="text">
+                <string>°</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_16">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <layout class="QVBoxLayout" name="verticalLayout_5">
+               <item>
+                <widget class="QRadioButton" name="rbLonEast">
+                 <property name="text">
+                  <string>East</string>
+                 </property>
+                 <property name="checked">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QRadioButton" name="rbLonWest">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="text">
+                  <string>West</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </widget>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>twSettingsTabs</tabstop>
+  <tabstop>textBrowser_5</tabstop>
+  <tabstop>rbDayCtrls</tabstop>
+  <tabstop>rbNightCtrls</tabstop>
+  <tabstop>cbDayOnly</tabstop>
+  <tabstop>cbNightOnly</tabstop>
+  <tabstop>cbImageProperty</tabstop>
+  <tabstop>cbAvailableControls</tabstop>
+  <tabstop>pbAddTuneCtrl</tabstop>
+  <tabstop>pbRemoveTuneCtrl</tabstop>
+  <tabstop>lwTuneCtrls</tabstop>
+  <tabstop>cbPropCtrlMin</tabstop>
+  <tabstop>sbPropCtrlMinVal</tabstop>
+  <tabstop>cbPropCtrlMax</tabstop>
+  <tabstop>sbPropCtrlMaxVal</tabstop>
+  <tabstop>cbEncourageLimits</tabstop>
+  <tabstop>cbNegativeEffect</tabstop>
+  <tabstop>textBrowser_2</tabstop>
+  <tabstop>sbDayTgtBrightness</tabstop>
+  <tabstop>sbDayTgtContrast</tabstop>
+  <tabstop>sbDayTgtSaturation</tabstop>
+  <tabstop>sbDayTgtBrightnessMin</tabstop>
+  <tabstop>sbDayTgtContrastMin</tabstop>
+  <tabstop>sbDayTgtSaturationMin</tabstop>
+  <tabstop>gbNightTargets</tabstop>
+  <tabstop>sbNightTgtBrightness</tabstop>
+  <tabstop>sbNightTgtContrast</tabstop>
+  <tabstop>sbNightTgtSaturation</tabstop>
+  <tabstop>sbNightTgtBrightnessMin</tabstop>
+  <tabstop>sbNightTgtContrastMin</tabstop>
+  <tabstop>sbNightTgtSaturationMin</tabstop>
+  <tabstop>textBrowser</tabstop>
+  <tabstop>rbLimitsDay</tabstop>
+  <tabstop>rbLimitsNight</tabstop>
+  <tabstop>cbAvailableLimitControls</tabstop>
+  <tabstop>pbAddLimitCtrl</tabstop>
+  <tabstop>pbRemoveLimitCtrl</tabstop>
+  <tabstop>lwLimitCtrls</tabstop>
+  <tabstop>cbLimitCtrlMin</tabstop>
+  <tabstop>sbLimitCtrlMinVal</tabstop>
+  <tabstop>cbLimitCtrlMax</tabstop>
+  <tabstop>sbLimitCtrlMaxVal</tabstop>
+  <tabstop>cbLimitEncourage</tabstop>
+  <tabstop>cbLimitPreferred</tabstop>
+  <tabstop>sbLimitCtrlPreferredVal</tabstop>
+  <tabstop>textBrowser_3</tabstop>
+  <tabstop>leCaptionText</tabstop>
+  <tabstop>cbDateStamp</tabstop>
+  <tabstop>cbTimeStamp</tabstop>
+  <tabstop>cbTwoFourHour</tabstop>
+  <tabstop>rbCaptionHLeft</tabstop>
+  <tabstop>rbCaptionHCenter</tabstop>
+  <tabstop>rbCaptionHRight</tabstop>
+  <tabstop>rbCaptionVBottom</tabstop>
+  <tabstop>rbCaptionVCenter</tabstop>
+  <tabstop>rbCaptionVTop</tabstop>
+  <tabstop>cbCaptionFont</tabstop>
+  <tabstop>sbCaptionFontSize</tabstop>
+  <tabstop>sbCaptionInsetX</tabstop>
+  <tabstop>sbCaptionInsetY</tabstop>
+  <tabstop>sbCaptionTextR</tabstop>
+  <tabstop>sbCaptionTextG</tabstop>
+  <tabstop>sbCaptionTextB</tabstop>
+  <tabstop>wColorView</tabstop>
+  <tabstop>textBrowser_4</tabstop>
+  <tabstop>rbDMS</tabstop>
+  <tabstop>rbFloat</tabstop>
+  <tabstop>sbLatDegrees</tabstop>
+  <tabstop>sbLatMinutes</tabstop>
+  <tabstop>sbLatSeconds</tabstop>
+  <tabstop>dsbLatFloat</tabstop>
+  <tabstop>rbLatNorth</tabstop>
+  <tabstop>rbLatSouth</tabstop>
+  <tabstop>sbLonDegrees</tabstop>
+  <tabstop>sbLonMinutes</tabstop>
+  <tabstop>sbLonSeconds</tabstop>
+  <tabstop>dsbLonFloat</tabstop>
+  <tabstop>rbLonEast</tabstop>
+  <tabstop>rbLonWest</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>SettingsDlg</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>248</x>
+     <y>254</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>SettingsDlg</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>316</x>
+     <y>260</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <designerdata>
+  <property name="gridDeltaX">
+   <number>2</number>
+  </property>
+  <property name="gridDeltaY">
+   <number>2</number>
+  </property>
+  <property name="gridSnapX">
+   <bool>true</bool>
+  </property>
+  <property name="gridSnapY">
+   <bool>true</bool>
+  </property>
+  <property name="gridVisible">
+   <bool>false</bool>
+  </property>
+ </designerdata>
+</ui>
